@@ -26,7 +26,20 @@
 .gallery-stats {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.gallery-item {
+  display: flex;
+  justify-content: space-between;
+  width: 360px;
+  height: 200px;
+  border: 1px solid #808080;
+}
+
+.gallery-img {
+  object-fit: cover;
 }
 
 .loader {
