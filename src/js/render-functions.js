@@ -7,14 +7,18 @@ const loader = document.querySelector(".loader");
 
 export function createGallery(images) {
     const markUp = images.map((pic) => {
-        return `<li>
+        return `<li class="gallery-item">
         <a href="${pic.largeImageURL}">
-        <img src="${pic.webformatURL}" alt="${pic.tags}" width="360">
+        <img class="gallery-img" src="${pic.webformatURL}" alt="${pic.tags}" width="360">
         </a>
-        <p>Likes<br/>${pic.likes}</p>
-        <p>Views<br/>${pic.views}</p>
-        <p>Comments<br/>${pic.comments}</p>
-        <p>Downloads<br/>${pic.downloads}</p>
+        <div class="gallery-likes-wrap"><p class="gallery-likes">Likes</p>
+        <p class="gallery-likes-count">${pic.likes}</p></div>
+        <div class="gallery-views-wrap"><p class="gallery-views">Views</p>
+        <p class="gallery-views-count">${pic.views}</p></div>
+        <div class="gallery-comments-wrap"><p class="gallery-comments">Comments</p>
+        <p class="gallery-comments-count">${pic.comments}</p></div>
+        <div class="gallery-downloads-wrap"><p class="gallery-downloads">Downloads</p>
+        <p class="gallery-downloads-count">${pic.downloads}</p></div>
         </li>`;
     }).join('');
     gallery.innerHTML = markUp;
