@@ -42,11 +42,11 @@
 }
 
 .gallery-link {
+  height: 152px;
   overflow: hidden;
 }
 
 .gallery-img {
-  width: 152px; 
   object-fit: cover;
 }
 
