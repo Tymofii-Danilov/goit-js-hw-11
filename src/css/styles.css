@@ -46,8 +46,8 @@
 }
 
 .gallery-img {
+  width: 152px; 
   object-fit: cover;
-  
 }
 
 .loader {
