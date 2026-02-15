@@ -3,7 +3,7 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 
 export let bigImg = new SimpleLightbox(".gallery a", { captionsData: "alt", captionDelay: 250, captionPosition: 'bottom' });
 const gallery = document.querySelector(".gallery");
-const loader = document.querySelector("span");
+const loader = document.querySelector(".loader");
 
 export function createGallery(images) {
     const markUp = images.map((pic) => {
@@ -26,9 +26,9 @@ export function clearGallery() {
 }
 
 export function showLoader() {
-    loader.classList.add("loader");
+    loader.classList.remove("hidden");
 }
 
 export function hideLoader() {
-    loader.classList.remove("loader");
+    loader.classList.add("hidden");
 }
