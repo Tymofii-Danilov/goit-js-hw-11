@@ -23,10 +23,6 @@
   gap: 24px;
 }
 
-.hidden {
-  display: none;
-}
-
 .loader {
   width: 48px;
   height: 48px;
@@ -56,4 +52,8 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+.hidden {
+  display: none;
 }
