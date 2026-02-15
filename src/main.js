@@ -1,15 +1,15 @@
 import { getImagesByQuery } from './js/pixabay-api.js';
-import { bigImg, clearGallery, createGallery, hideLoader, showLoader } from './js/render-functions.js';
+import { clearGallery, createGallery, hideLoader, showLoader } from './js/render-functions.js';
 import iziToast from "izitoast";
 
 const form = document.querySelector(".form");
-const picture = form.querySelectorAll("a");
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     const input = event.target.elements['search-text'];
 if (input.value === "") {
 iziToast.show({ color: "red", position: "topRight", message: "Please type in something"});
+return;
 };
     clearGallery();
     showLoader();
