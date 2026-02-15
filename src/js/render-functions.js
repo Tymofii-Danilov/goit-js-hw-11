@@ -11,6 +11,7 @@ export function createGallery(images) {
         <a href="${pic.largeImageURL}">
         <img class="gallery-img" src="${pic.webformatURL}" alt="${pic.tags}" width="360">
         </a>
+        <div class="gallery-stats">
         <div class="gallery-count-wrap"><p class="gallery-counter">Likes</p>
         <p class="gallery-count">${pic.likes}</p></div>
         <div class="gallery-count-wrap"><p class="gallery-counter">Views</p>
@@ -19,6 +20,7 @@ export function createGallery(images) {
         <p class="gallery-count">${pic.comments}</p></div>
         <div class="gallery-count-wrap"><p class="gallery-counter">Downloads</p>
         <p class="gallery-count">${pic.downloads}</p></div>
+        </div>
         </li>`;
     }).join('');
     gallery.innerHTML = markUp;
