@@ -29,7 +29,6 @@
   justify-content: space-between;
   align-itema: center;
   text-align: center;
-  overflow: hidden;
 }
 
 .gallery-item {
@@ -39,6 +38,7 @@
   width: 360px;
   height: 200px;
   border: 1px solid #808080;
+  overflow: hidden;
 }
 
 .gallery-img {
