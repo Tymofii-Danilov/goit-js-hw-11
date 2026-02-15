@@ -8,7 +8,9 @@ const picture = form.querySelectorAll("a");
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     const input = event.target.elements['search-text'];
-
+if (input.value === "") {
+iziToast.show({ color: "red", position: "topRight", message: "Please type in something"});
+};
     clearGallery();
     showLoader();
 
@@ -20,7 +22,7 @@ form.addEventListener("submit", (event) => {
                 createGallery(data);
             }
         }).catch(error => {
-            console.log(error.message);
+            iziToast.show({ color: "red", position: "topRight", message: error.message });
         }).finally(() => {
             hideLoader();
         });
