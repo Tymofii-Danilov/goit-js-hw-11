@@ -8,7 +8,7 @@ const loader = document.querySelector(".loader");
 export function createGallery(images) {
     const markUp = images.map((pic) => {
         return `<li class="gallery-item">
-        <a href="${pic.largeImageURL}">
+        <a class="gallery-link" href="${pic.largeImageURL}">
         <img class="gallery-img" src="${pic.webformatURL}" alt="${pic.tags}" width="360">
         </a>
         <div class="gallery-stats">
