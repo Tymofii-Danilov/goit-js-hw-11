@@ -11,14 +11,14 @@ export function createGallery(images) {
         <a href="${pic.largeImageURL}">
         <img class="gallery-img" src="${pic.webformatURL}" alt="${pic.tags}" width="360">
         </a>
-        <div class="gallery-likes-wrap"><p class="gallery-likes">Likes</p>
-        <p class="gallery-likes-count">${pic.likes}</p></div>
-        <div class="gallery-views-wrap"><p class="gallery-views">Views</p>
-        <p class="gallery-views-count">${pic.views}</p></div>
-        <div class="gallery-comments-wrap"><p class="gallery-comments">Comments</p>
-        <p class="gallery-comments-count">${pic.comments}</p></div>
-        <div class="gallery-downloads-wrap"><p class="gallery-downloads">Downloads</p>
-        <p class="gallery-downloads-count">${pic.downloads}</p></div>
+        <div class="gallery-count-wrap"><p class="gallery-counter">Likes</p>
+        <p class="gallery-count">${pic.likes}</p></div>
+        <div class="gallery-count-wrap"><p class="gallery-counter">Views</p>
+        <p class="gallery-count">${pic.views}</p></div>
+        <div class="gallery-count-wrap"><p class="gallery-counter">Comments</p>
+        <p class="gallery-count">${pic.comments}</p></div>
+        <div class="gallery-count-wrap"><p class="gallery-counter">Downloads</p>
+        <p class="gallery-count">${pic.downloads}</p></div>
         </li>`;
     }).join('');
     gallery.innerHTML = markUp;
