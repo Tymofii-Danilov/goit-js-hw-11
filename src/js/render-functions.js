@@ -1,7 +1,7 @@
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
-export let bigImg = new SimpleLightbox(".gallery a", { captionsData: "alt", captionDelay: 250, captionPosition: 'bottom' });
+export let bigImg = new SimpleLightbox(".gallery a", { captionsData: "alt", captionDelay: 250, captionPosition: 'outside' });
 const gallery = document.querySelector(".gallery");
 const loader = document.querySelector(".loader");
 
